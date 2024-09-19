@@ -36,7 +36,6 @@ const Dashboard: React.FC = () => {
       setDescription('');
       setAmount(0);
       setType('Renda');
-      entries.push({ id: user.uid, description, amount, type, uid: user.uid })
       await fetchEntries()
     }
   };
