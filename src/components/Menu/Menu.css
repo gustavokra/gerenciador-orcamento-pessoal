@@ -50,6 +50,10 @@ a {
     height: 510%;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 @media (width >=1280px) {
     header {
         position: relative;

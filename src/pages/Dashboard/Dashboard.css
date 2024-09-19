@@ -7,20 +7,11 @@
     display: flex;
     justify-content: space-between;
     align-items: initial;
-    color: var(--bg-color);
 }
 
 #dashboard h1,
 h2 {
     color: var(--bg-color);
-}
-
-#dashboard .content>div {
-    width: 324px;
-    height: 426px;
-    background-color: var(--light-gray);
-    padding: 1rem;
-    border-radius: 0.4rem;
 }
 
 #dashboard h1:first-of-type {
@@ -49,10 +40,24 @@ h2 {
     width: 100%;
 }
 
+#dashboard .entries .renda {
+    background-color: rgba(0, 128, 0, 0.350);
+    border-radius: 5px;
+}
+
+
+#dashboard .entries .despesa {
+    background-color: rgba(255, 0, 0, 0.350);
+    border-radius: 5px;
+}
+
+#dashboard .entries {
+    overflow-y: scroll;
+}
+
 #dashboard .entries>ul {
     text-align: justify;
 }
-
 
 #dashboard .entries-header,
 .entry-item {
@@ -74,4 +79,50 @@ h2 {
     border: 0;
     height: 1px;
     background: #ccc;
+}
+
+#dashboard .layout {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    color: var(--bg-color);
+}
+
+#dashboard .layout>div {
+    width: 324px;
+    height: 426px;
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+
+
+@media (width >= 1280px) {
+    #dashboard {
+        background: var(--bg-color);
+        border-top: none;
+        height: 100vh;
+
+        .layout {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .content p {
+            width: 80%;
+            align-self: center;
+        }
+        
+        .content {
+            gap: 2.5rem;
+        }
+        
+        .content p {
+            width: 80%;
+            align-self: center;
+        }
+        
+    }
 }

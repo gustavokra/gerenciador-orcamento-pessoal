@@ -9,7 +9,7 @@ const Dashboard: React.FC = () => {
   const [entries, setEntries] = useState<EntryProps[]>([]);
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState<number>(0);
-  const [type, setType] = useState<'income' | 'expense'>('income');
+  const [type, setType] = useState<'Renda' | 'Despesa'>('Renda');
   const [editId, setEditId] = useState<string | null>(null);
   const { user } = useAuth();
   const api = useFirebase();
@@ -35,7 +35,8 @@ const Dashboard: React.FC = () => {
       }
       setDescription('');
       setAmount(0);
-      setType('income');
+      setType('Renda');
+      entries.push({ id: user.uid, description, amount, type, uid: user.uid })
       await fetchEntries()
     }
   };
@@ -56,11 +57,11 @@ const Dashboard: React.FC = () => {
   };
 
   const totalIncome = entries
-    .filter(entry => entry.type === 'income')
+    .filter(entry => entry.type === 'Renda')
     .reduce((acc, entry) => acc + entry.amount, 0);
 
   const totalExpenses = entries
-    .filter(entry => entry.type === 'expense')
+    .filter(entry => entry.type === 'Despesa')
     .reduce((acc, entry) => acc + entry.amount, 0);
 
   const balance = totalIncome - totalExpenses;
@@ -69,7 +70,7 @@ const Dashboard: React.FC = () => {
     <section id='dashboard'>
       <div className='container'>
         <h1>Dashboard</h1>
-        <div className='content'>
+        <div className='layout'>
           <div className='addEntry'>
             <h2>Adicionar Entrada</h2>
             <input
@@ -84,16 +85,15 @@ const Dashboard: React.FC = () => {
               value={amount}
               onChange={(e) => setAmount(Number(e.target.value))}
             />
-            <select value={type} onChange={(e) => setType(e.target.value as 'income' | 'expense')}>
-              <option value="income">Renda</option>
-              <option value="expense">Despesa</option>
+            <select value={type} onChange={(e) => setType(e.target.value as 'Renda' | 'Despesa')}>
+              <option value="Renda">Renda</option>
+              <option value="Despesa">Despesa</option>
             </select>
             <Button
               text={editId ? 'Editar Entrada' : 'Adicionar Entrada'}
               onClick={handleAddEntry}
               secondary={false} />
           </div>
-
           <div className='entries'>
             <h2>Entradas</h2>
             <div className='entries-header'>
@@ -105,7 +105,9 @@ const Dashboard: React.FC = () => {
               {entries.map(entry => (
                 <li key={entry.id} className='entry-item'>
                   <span>{entry.description}</span>
-                  <span>R$ {entry.amount}</span>
+                  <span className={entry.type === "Renda" ?
+                      "renda"
+                    : "despesa"}>R$ {entry.amount}</span>
                   <span>
                     <button onClick={() => handleEdit(entry.id)}>Editar</button>
                     <button onClick={() => handleDelete(entry.id)}>Remover</button>

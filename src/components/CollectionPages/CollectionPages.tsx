@@ -8,7 +8,7 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Sobre from '../../pages/Sobre/Sobre';
 import { Api } from '../../utils/api/api';
-import Navigation from '../Navigation/Navigation';
+import Menu from '../Menu/Menu';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
@@ -23,7 +23,7 @@ const CollectionPages: React.FC = () => {
 
   return (
     <Router>
-      <Navigation />
+      <Menu />
       <Routes>
         <Route
           path="/"

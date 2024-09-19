@@ -1,6 +1,6 @@
 export type EntryProps = {
   id: string;
-  type: 'income' | 'expense';
+  type: 'Renda' | 'Despesa';
   description: string;
   amount: number;
   uid: string;
