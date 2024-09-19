@@ -1,0 +1,28 @@
+#register .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 324px;
+  height: 426px;
+}
+
+#register .content > input {
+  border-radius: 0.4rem;
+  border: none;
+  padding-block: 0.825rem;
+  padding-inline: 1.5rem;
+  width: 100%;
+}
+
+#register .content > a {
+  margin: 0 auto;
+}
+
+#register h2 {
+  color: var(--primary-color);
+  padding: 1rem;
+}

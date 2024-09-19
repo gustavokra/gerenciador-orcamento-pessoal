@@ -1,0 +1,77 @@
+#dashboard {
+    text-align: center;
+}
+
+#dashboard .content {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    color: var(--bg-color);
+}
+
+#dashboard h1,
+h2 {
+    color: var(--bg-color);
+}
+
+#dashboard .content>div {
+    width: 324px;
+    height: 426px;
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+#dashboard h1:first-of-type {
+    color: var(--primary-color);
+}
+
+#dashboard .addEntry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#dashboard input {
+    border-radius: 0.4rem;
+    border: solid 1px;
+    padding-block: 0.825rem;
+    padding-inline: 1.5rem;
+    width: 100%;
+}
+
+#dashboard select {
+    border-radius: 0.4rem;
+    border: solid 1px;
+    padding-block: 0.825rem;
+    padding-inline: 1.5rem;
+    width: 100%;
+}
+
+#dashboard .entries>ul {
+    text-align: justify;
+}
+
+
+#dashboard .entries-header,
+.entry-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#dashboard .entries-header {
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#dashboard .entry-item hr {
+    margin-top: 10px;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}

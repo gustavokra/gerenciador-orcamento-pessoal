@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionPages from './components/CollectionPages';
+import CollectionPages from './components/CollectionPages/CollectionPages';
 import { AuthProvider } from './context/AuthContext';
 import { FirebaseContext } from './context/firebaseContext';
 import { auth, db } from './firebase';

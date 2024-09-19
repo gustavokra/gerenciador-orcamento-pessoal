@@ -1,0 +1,33 @@
+#login .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    width: 324px;
+    height: 426px;
+    box-sizing: content-box;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#login .content > input {
+    border-radius: 0.4rem;
+    border: none;
+    padding-block: 0.825rem;
+    padding-inline: 1.5rem;
+    width: 100%;
+}
+
+#login .content > a {
+    margin: 0 auto;
+}
+
+#login h2 {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+

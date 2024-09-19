@@ -1,11 +1,25 @@
 {
-    "firebaseConfig": {
-        "apiKey": "AIzaSyB7PpMEhTMkn39FWKSaYdJ3Yp_7kIwKLG4",
-        "authDomain": "gerenciador-orcamento-beec6.firebaseapp.com",
-        "projectId": "gerenciador-orcamento-beec6",
-        "storageBucket": "gerenciador-orcamento-beec6.appspot.com",
-        "messagingSenderId": "1088857367285",
-        "appId": "1:1088857367285:web:43011e40f6a042bf111bbc",
-        "measurementId": "G-G9JPG8563D"
-    }
+  "firebaseConfig": {
+    "apiKey": "AIzaSyB7PpMEhTMkn39FWKSaYdJ3Yp_7kIwKLG4",
+    "authDomain": "gerenciador-orcamento-beec6.firebaseapp.com",
+    "projectId": "gerenciador-orcamento-beec6",
+    "storageBucket": "gerenciador-orcamento-beec6.appspot.com",
+    "messagingSenderId": "1088857367285",
+    "appId": "1:1088857367285:web:43011e40f6a042bf111bbc",
+    "measurementId": "G-G9JPG8563D"
+  },
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }

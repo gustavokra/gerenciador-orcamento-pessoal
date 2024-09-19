@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { auth } from '../../firebase';
+import Button from '../Button/Button';
 
 const Logout: React.FC = () => {
   const navigate = useNavigate();
@@ -18,9 +19,7 @@ const Logout: React.FC = () => {
   };
 
   return (
-    <button onClick={handleLogout}>
-      Logout
-    </button>
+    <Button text='Logout' secondary={true} onClick={() => handleLogout()}></Button>
   );
 };
 

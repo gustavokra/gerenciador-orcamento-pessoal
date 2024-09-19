@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signUpWithEmail } from '../../firebase';
+import "./Register.css";
+import Button from '../../components/Button/Button';
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -18,9 +20,9 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-box">
-        <h2>Registro</h2>
+    <section id='register'>
+    <div className="container content">
+        <h2>Cadastro</h2>
         <input
           type="email"
           placeholder="Email"
@@ -35,11 +37,11 @@ const Register: React.FC = () => {
           onChange={(e) => setPassword(e.target.value)}
           className="auth-input"
         />
-        <button onClick={handleRegister} className="auth-button">Registrar</button>
+        <Button text='Cadastrar' secondary={true} onClick={handleRegister} />
         {error && <p className="auth-error">{error}</p>}
         <a href="/login" className="auth-link">Já tem uma conta? Faça login</a>
-      </div>
     </div>
+    </section>
   );
 };
 

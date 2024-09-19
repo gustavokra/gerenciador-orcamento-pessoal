@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { auth, db } from '../../firebase';
-import Dashboard from '../../pages/Dashboard';
-import Home from '../../pages/Home';
-import Login from '../../pages/Login';
-import Register from '../../pages/Register';
-import Sobre from '../../pages/Sobre';
+import Dashboard from '../../pages/Dashboard/Dashboard';
+import Home from '../../pages/Home/Home';
+import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
+import Sobre from '../../pages/Sobre/Sobre';
 import { Api } from '../../utils/api/api';
-import Navigation from '../Navigation/navigation';
+import Navigation from '../Navigation/Navigation';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();

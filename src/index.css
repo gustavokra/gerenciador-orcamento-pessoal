@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -14,7 +16,7 @@
 
 :root {
   --bg-color: #252424;
-  --bg-color-invisible: rgb(37, 36, 36, 0.5);
+  --bg-color-login: #413e3e;
   --text-color: #FFF;
   --second-text-color: #737373;
   --light-text-color: #FFF;
@@ -58,7 +60,7 @@ body {
 
 h1, h2, h3 {
   line-height: 1.2;
-  color: var(--text-color);
+  color: var( --primary-color);
   font-weight: var(--fw-bold);
   letter-spacing: -0.04em;
 }
@@ -122,3 +124,4 @@ ul {
       --pg-lg: 2rem;
   }
 }
+
