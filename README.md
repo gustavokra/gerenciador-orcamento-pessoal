@@ -4,3 +4,5 @@ O “Gerenciador de Orçamento Pessoal” é uma aplicação web que permite aos
 Seus orçamentos ficam na tela "Dashboard".
 
 O projeto foi criado usando React Js com TypeScript. Ele possui autenticação e banco de dados do Firebase.
+
+As telas são responsivas para celular e monitor.
